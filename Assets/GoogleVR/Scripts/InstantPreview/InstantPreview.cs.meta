@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7528488988f9d48478da328909125dea
+timeCreated: 1517520718
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - InstantPreviewApk: {fileID: 102900000, guid: dc278786e6540af428ccbf7825495004,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
