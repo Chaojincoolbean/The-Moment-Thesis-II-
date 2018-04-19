@@ -70,7 +70,6 @@ public class FloatMovement : MonoBehaviour {
             if (Vector3.Dot(camLookDir, LookDir) > 0.99)
             {
                 FloatUp();
-                Debug.Log("called");
             }
         }
         
@@ -106,10 +105,13 @@ public class FloatMovement : MonoBehaviour {
             PlayerCamera.GetComponent<FxPro>().Init();
         }
 
-        this.gameObject.GetComponent<AudioListener>().enabled = false;
+        AudioListener.volume = 0.5f;
+
     }
 
     void SaturateCamera(){
+
+        //PlayerCamera.gameObject.GetComponent<AudioListener>().enabled = true;
 
         DesaturateValue = PlayerCamera.GetComponent<FxPro>().DesaturateDarksStrength;
 
@@ -120,6 +122,6 @@ public class FloatMovement : MonoBehaviour {
             PlayerCamera.GetComponent<FxPro>().Init();
         }
 
-        this.gameObject.GetComponent<AudioListener>().enabled = true;
+        AudioListener.volume = 1f;
     }
 }

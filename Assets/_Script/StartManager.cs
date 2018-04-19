@@ -14,6 +14,7 @@ public class StartManager : MonoBehaviour {
 	public GameObject Mask;
     public GameObject Dying;
     public GameObject Moment;
+    public GameObject Star;
     public Camera PlayerCamera;
     public Material Daytime;
     private int LengthOfLineRender;
@@ -23,6 +24,9 @@ public class StartManager : MonoBehaviour {
     private bool changeYposition1 = true;
     private bool changeYposition2 = true;
     private bool changeYposition3 = true;
+    private bool changeYposition4 = true;
+    private bool changeYposition5 = true;
+    private bool changeYposition6 = true;
 
     // Use this for initialization
     void Start () {
@@ -40,7 +44,6 @@ public class StartManager : MonoBehaviour {
 
         LoadTime = LoadTime + Time.deltaTime;
 
-
 		if (LoadTime > 15f) {
 			HeartBeatGroup.SetActive (true);
 			Mask.SetActive (true);
@@ -48,7 +51,7 @@ public class StartManager : MonoBehaviour {
 
         if (LoadTime > 55f)
         {
-            //Canvas.SetActive(false);
+            Canvas.SetActive(false);
 
             if(changeYposition1 == true){
                 
@@ -59,36 +62,78 @@ public class StartManager : MonoBehaviour {
             }
         }
 
-        if (LoadTime > 75f)
+        if (LoadTime > 65f)
         {
 
             if (changeYposition2 == true){
                 
-                ChangeY(lineRender1, 0.8f);
-                ChangeY(lineRender2, 0.8f);
-                ChangeY(lineRender3, 0.8f);
+                ChangeY(lineRender1, 0.6f);
+                ChangeY(lineRender2, 0.6f);
+                ChangeY(lineRender3, 0.6f);
                 changeYposition2 = false;
             }
         }
+
+        if (LoadTime > 75f)
+        {
+
+            if (changeYposition3 == true)
+            {
+
+                ChangeY(lineRender1, 0.4f);
+                ChangeY(lineRender2, 0.4f);
+                ChangeY(lineRender3, 0.4f);
+                changeYposition3 = false;
+            }
+        }
+
+        if (LoadTime > 85f)
+        {
+
+            if (changeYposition4 == true)
+            {
+
+                ChangeY(lineRender1, 0.2f);
+                ChangeY(lineRender2, 0.2f);
+                ChangeY(lineRender3, 0.2f);
+                changeYposition4 = false;
+            }
+        }
+
+        if (LoadTime > 95f)
+        {
+
+            if (changeYposition5 == true)
+            {
+
+                ChangeY(lineRender1, 0.1f);
+                ChangeY(lineRender2, 0.1f);
+                ChangeY(lineRender3, 0.1f);
+                changeYposition5 = false;
+            }
+        }
+
 
         if (LoadTime > 99f) {
 
             Mask.SetActive(false);
 
-            if (changeYposition3 == true){
+            if (changeYposition6 == true){
                 
                 ChangeY(lineRender1, 0f);
                 ChangeY(lineRender2, 0f);
                 ChangeY(lineRender3, 0f);
-                changeYposition3 = false;
+                changeYposition6 = false;
             }
 
         }
+
 
 		if (LoadTime > 115f) {
 
             LoadTime = 0f;
             Moment.SetActive(true);
+            Star.SetActive(true);
             Dying.SetActive(false);
             PlayerCamera.GetComponent<Camera>().clearFlags = CameraClearFlags.Skybox;
             RenderSettings.skybox = Daytime;
@@ -98,8 +143,6 @@ public class StartManager : MonoBehaviour {
     }
 
     void ChangeY(LineRenderer m, float n){
-
-        Debug.Log("called once");
 
         Vector3[] positions = new Vector3[LengthOfLineRender];
 

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 62f1d7ebbdc4b450ca5624574d892818, type: 2}
+  m_SkyboxMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 629009755}
-  m_IndirectSpecularColor: {r: 0.6055959, g: 0.6964087, b: 0.5464036, a: 1}
+  m_IndirectSpecularColor: {r: 0.99999946, g: 0.99999946, b: 0.99999946, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -164,7 +164,7 @@ Transform:
   - {fileID: 713646439}
   - {fileID: 1387727793}
   m_Father: {fileID: 716028984}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -0.86, y: 150, z: 0}
 --- !u!1 &21477486
 GameObject:
@@ -533,7 +533,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 305340635}
-  m_PlaneDistance: 0.4
+  m_PlaneDistance: 0.33
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -555,7 +555,7 @@ RectTransform:
   m_Children:
   - {fileID: 1774235356}
   m_Father: {fileID: 716028984}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1149,7 +1149,7 @@ AudioListener:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 305340629}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!92 &305340633
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1739,7 +1739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &436394633
 Transform:
   m_ObjectHideFlags: 0
@@ -2237,7 +2237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &545073997
 Transform:
   m_ObjectHideFlags: 0
@@ -2668,7 +2668,7 @@ GameObject:
   - component: {fileID: 680029103}
   - component: {fileID: 680029104}
   m_Layer: 0
-  m_Name: 4 (2)
+  m_Name: 4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2685,7 +2685,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 918774763}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &680029104
 AudioSource:
@@ -2706,8 +2706,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 2.2
+  MinDistance: 0
+  MaxDistance: 4
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -2940,10 +2940,10 @@ Transform:
   m_Children:
   - {fileID: 1345409761}
   - {fileID: 1849537347}
-  - {fileID: 179544494}
   - {fileID: 18810169}
   - {fileID: 1244193553}
   - {fileID: 1228063761}
+  - {fileID: 179544494}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -3402,9 +3402,9 @@ Transform:
   m_Children:
   - {fileID: 1095035758}
   - {fileID: 1823807779}
+  - {fileID: 680029103}
   - {fileID: 1252578368}
   - {fileID: 2055463288}
-  - {fileID: 680029103}
   - {fileID: 1109349680}
   - {fileID: 1227521302}
   m_Father: {fileID: 2053358786}
@@ -4196,7 +4196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1098121059
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -4311,7 +4311,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -887234156
+  randomSeed: 2099938410
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7635,7 +7635,7 @@ GameObject:
   - component: {fileID: 1109349680}
   - component: {fileID: 1109349681}
   m_Layer: 0
-  m_Name: 4 (3)
+  m_Name: 4 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7673,8 +7673,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 2.2
+  MinDistance: 0
+  MaxDistance: 4
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -8045,7 +8045,7 @@ Transform:
   - {fileID: 185650656}
   - {fileID: 292371015}
   m_Father: {fileID: 716028984}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1240538656
 GameObject:
@@ -8282,7 +8282,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 716028984}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1252578367
 GameObject:
@@ -8294,7 +8294,7 @@ GameObject:
   - component: {fileID: 1252578368}
   - component: {fileID: 1252578369}
   m_Layer: 0
-  m_Name: 4
+  m_Name: 4 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8311,7 +8311,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 918774763}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1252578369
 AudioSource:
@@ -8332,8 +8332,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 2.2
+  MinDistance: 0
+  MaxDistance: 4
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -8510,6 +8510,7 @@ MonoBehaviour:
   Mask: {fileID: 18810167}
   Dying: {fileID: 716028983}
   Moment: {fileID: 2053358785}
+  Star: {fileID: 1098121058}
   PlayerCamera: {fileID: 305340635}
   Daytime: {fileID: 2100000, guid: 62f1d7ebbdc4b450ca5624574d892818, type: 2}
   lineRender1: {fileID: 0}
@@ -9337,7 +9338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.900024, y: 106}
+  m_AnchoredPosition: {x: -22.6, y: 24.6}
   m_SizeDelta: {x: 20000, y: 10000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1774235357
@@ -9801,7 +9802,7 @@ MonoBehaviour:
   NotMoving: 1
   HeadsetLastFrame: {x: 0, y: 0, z: 0}
   HeadsetDistance: 0
-  DesaturateSpeed: 0.1
+  DesaturateSpeed: 0.001
   DesaturateValue: 0
   Wind: {fileID: 0}
   Sound: {fileID: 0}
@@ -10435,7 +10436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2053358786
 Transform:
   m_ObjectHideFlags: 0
@@ -10467,7 +10468,7 @@ GameObject:
   - component: {fileID: 2055463288}
   - component: {fileID: 2055463289}
   m_Layer: 0
-  m_Name: 4 (1)
+  m_Name: 4 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10484,7 +10485,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 918774763}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2055463289
 AudioSource:
@@ -10505,8 +10506,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 2.2
+  MinDistance: 0
+  MaxDistance: 4
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
