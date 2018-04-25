@@ -67,7 +67,7 @@ public class FloatMovement : MonoBehaviour {
 
         if (GameTime > StartTime)
         {
-            if (Vector3.Dot(camLookDir, LookDir) > 0.99)
+            if (Vector3.Dot(camLookDir, LookDir) > 0.8f)
             {
                 FloatUp();
             }
@@ -105,7 +105,7 @@ public class FloatMovement : MonoBehaviour {
             PlayerCamera.GetComponent<FxPro>().Init();
         }
 
-        AudioListener.volume = 0.5f;
+        AudioListener.volume = Mathf.Lerp(AudioListener.volume,0.5f,0.05f);
 
     }
 
@@ -122,6 +122,6 @@ public class FloatMovement : MonoBehaviour {
             PlayerCamera.GetComponent<FxPro>().Init();
         }
 
-        AudioListener.volume = 1f;
+        AudioListener.volume = Mathf.Lerp(AudioListener.volume, 1.0f, 0.05f);
     }
 }

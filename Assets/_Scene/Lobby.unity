@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 62f1d7ebbdc4b450ca5624574d892818, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 629009755}
-  m_IndirectSpecularColor: {r: 0.99999946, g: 0.99999946, b: 0.99999946, a: 1}
+  m_IndirectSpecularColor: {r: 0.60640323, g: 0.6963963, b: 0.54327756, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1261,7 +1261,7 @@ MonoBehaviour:
   FarTint: {r: 1, g: 1, b: 1, a: 1}
   CloseTintStrength: 0
   FarTintStrength: 0
-  DesaturateDarksStrength: 2
+  DesaturateDarksStrength: 0
   DesaturateFarObjsStrength: 0
   FogTint: {r: 1, g: 1, b: 1, a: 1}
   FogStrength: 0
@@ -2237,7 +2237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &545073997
 Transform:
   m_ObjectHideFlags: 0
@@ -9792,7 +9792,7 @@ MonoBehaviour:
   AccelerationPoint: 12
   AccelerationPoint2: 200
   AccelerationPoint3: 200
-  FloatEndPositionY: 1000
+  FloatEndPositionY: 200
   AS: {fileID: 0}
   BA: {fileID: 0}
   Moment: {fileID: 2053358785}
@@ -10436,7 +10436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2053358786
 Transform:
   m_ObjectHideFlags: 0
