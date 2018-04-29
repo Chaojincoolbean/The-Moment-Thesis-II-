@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Scene/GGJ.unity
     guid: 76ecc64d66713422bb5c27443d0342fd
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scene/Lobby.unity
     guid: f250ab850afd14cd59233b013367aee5
+  - enabled: 1
+    path: Assets/_Scene/Thesis.unity
+    guid: 229645b8ed8a849168031fbe46a1f146

@@ -15,7 +15,7 @@ public class Reset : MonoBehaviour {
 
         if(GvrControllerInput.ClickButton){
 
-            SceneManager.LoadScene("Lobby");
+            SceneManager.LoadScene("Thesis");
         }
 		
 	}

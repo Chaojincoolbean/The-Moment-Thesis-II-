@@ -29,6 +29,12 @@ public class FloatMovement : MonoBehaviour {
     public float DesaturateValue;
     public GameObject Wind;
     public GameObject Sound;
+    public MeshRenderer skybox;
+    public GameObject Light;
+    bool GameEnd1 = false;
+    bool GameEnd2 = false;
+    public float Alpha;
+    public GameObject Credits;
 
     void Start () {
 
@@ -36,28 +42,56 @@ public class FloatMovement : MonoBehaviour {
         //BA = BackgroundAudio.GetComponent<AudioSource>();
 
 	}
-	
-	void Update () {
+
+    void Update()
+    {
 
         GameTime = GameTime + Time.deltaTime;
 
         HeadsetDistance = Vector3.Distance(PlayerCamera.transform.position, HeadsetLastFrame);
 
-        DebugView.gameObject.GetComponent<TextMesh>().text = HeadsetDistance.ToString();
+        if (Vector3.Distance(PlayerCamera.transform.position, HeadsetLastFrame) < 0.001f)
 
-        if(Vector3.Distance(PlayerCamera.transform.position,HeadsetLastFrame)< 0.0001f)
-            
         {
             LookForward();
         }
-        else {
-            
+        else
+        {
+
             DesaturateCamera();
         }
 
         HeadsetLastFrame = PlayerCamera.transform.position;
 
+        if (Player.transform.position.y > AccelerationPoint2)
+        {
+            GameEnd1 = true;
+        }
+    
+        if (Light.transform.rotation.x < - 0.1f)
+        {
+            GameEnd2 = true;
+        }
+
+        if (GameEnd1 == true & GameEnd2 == true)
+        {
+
+            Alpha = Alpha - 0.001f;
+            SetSkyAmount(Alpha);
+
+        }
+
+        if (Alpha <= 0)
+        {
+            Moment.SetActive(false);
+            Credits.SetActive(true);
+            Credits.transform.position = new Vector3(Player.transform.position.x,
+                                                     Player.transform.position.y + 200f,
+                                                     Player.transform.position.z);
+        }
     }
+
+
 
     void LookForward(){
 
@@ -67,7 +101,7 @@ public class FloatMovement : MonoBehaviour {
 
         if (GameTime > StartTime)
         {
-            if (Vector3.Dot(camLookDir, LookDir) > 0.8f)
+            if (Vector3.Dot(camLookDir, LookDir) > 0.90f)
             {
                 FloatUp();
             }
@@ -75,8 +109,7 @@ public class FloatMovement : MonoBehaviour {
         
     }
 
-    void FloatUp()
-    {
+    void FloatUp() {
 
         SaturateCamera();
 
@@ -87,12 +120,15 @@ public class FloatMovement : MonoBehaviour {
 
         Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y + FloatSpeed, Player.transform.position.z);
 
-         if (Player.transform.position.y > FloatEndPositionY)
-         {
-            Lobby.SetActive(true);
-            Moment.SetActive(false);
-        }
     }
+
+    void SetSkyAmount(float amount){
+        
+        skybox.sharedMaterial.SetFloat("_Cutoff", amount);
+
+        DebugView.GetComponent<TextMesh>().text = amount.ToString();
+    }
+
 
     void DesaturateCamera(){
         
