@@ -62,7 +62,7 @@ public class StartManager : MonoBehaviour {
             }
         }
 
-        if (LoadTime > 65f)
+        if (LoadTime > 66f)
         {
 
             if (changeYposition2 == true){
@@ -74,7 +74,7 @@ public class StartManager : MonoBehaviour {
             }
         }
 
-        if (LoadTime > 75f)
+        if (LoadTime > 77f)
         {
 
             if (changeYposition3 == true)
