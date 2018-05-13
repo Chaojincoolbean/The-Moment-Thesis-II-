@@ -5,6 +5,7 @@ using UnityEngine;
 public class AutoIntensity : MonoBehaviour {
 
     public Gradient nightDayColor;
+    public GameObject Player;
 
     public float maxIntensity = 3f;
     public float minIntensity = 0f;
@@ -63,7 +64,15 @@ public class AutoIntensity : MonoBehaviour {
 
         if (dot > 0)
         {
+
+            if (Player.transform.position.y > 15f & dot >0.42f)
+            {
+                dayRotateSpeed = new Vector3(-1f, 0, 0);
+            }
+            else dayRotateSpeed = new Vector3(-0.3f, 0, 0);
+
             transform.Rotate(dayRotateSpeed * Time.deltaTime * skySpeed);
+
         }
         else
         {

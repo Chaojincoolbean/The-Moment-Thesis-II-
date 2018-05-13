@@ -57,8 +57,10 @@ public class FloatMovement : MonoBehaviour {
         }
         else
         {
-
-            DesaturateCamera();
+            if(Player.transform.position.y < AccelerationPoint2)
+            {
+                DesaturateCamera();
+            }
         }
 
         HeadsetLastFrame = PlayerCamera.transform.position;
@@ -75,7 +77,11 @@ public class FloatMovement : MonoBehaviour {
 
         if (GameEnd1 == true & GameEnd2 == true)
         {
-
+           
+            Player.transform.position = new Vector3(Player.transform.position.x, //set player in the right position
+                                        FloatEndPositionY,
+                                        Player.transform.position.z);
+            
             Alpha = Alpha - 0.001f;
             SetSkyAmount(Alpha);
 
@@ -84,7 +90,7 @@ public class FloatMovement : MonoBehaviour {
         if (Alpha <= 0)
         {
             Moment.SetActive(false);
-            Credits.SetActive(true);
+            Credits.SetActive(true); 
             Credits.transform.position = new Vector3(Player.transform.position.x,
                                                      Player.transform.position.y + 100f,
                                                      Player.transform.position.z);
@@ -109,12 +115,11 @@ public class FloatMovement : MonoBehaviour {
         
     }
 
-    void FloatUp() {
+    void FloatUp() 
+    {
 
         SaturateCamera();
 
-        if (Player.transform.position.y < FloatEndPositionY)
-        {
 
             if (Player.transform.position.y > AccelerationPoint)
             {
@@ -122,11 +127,6 @@ public class FloatMovement : MonoBehaviour {
             }
 
         Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y + FloatSpeed, Player.transform.position.z);
-        
-        }
-
-        else  Player.transform.position = new Vector3(Player.transform.position.x, FloatEndPositionY, Player.transform.position.z);
-
     }
 
     void SetSkyAmount(float amount){
@@ -148,7 +148,7 @@ public class FloatMovement : MonoBehaviour {
             PlayerCamera.GetComponent<FxPro>().Init();
         }
 
-        AudioListener.volume = Mathf.Lerp(AudioListener.volume,0.1f,0.05f);
+        AudioListener.volume = Mathf.Lerp(AudioListener.volume,0.1f,0.01f);
 
     }
 
@@ -165,7 +165,7 @@ public class FloatMovement : MonoBehaviour {
             PlayerCamera.GetComponent<FxPro>().Init();
         }
 
-        AudioListener.volume = Mathf.Lerp(AudioListener.volume, 1f, 0.05f);
+        AudioListener.volume = Mathf.Lerp(AudioListener.volume, 1f, 0.01f);
     }
 
 }

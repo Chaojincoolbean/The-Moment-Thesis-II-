@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 62f1d7ebbdc4b450ca5624574d892818, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 629009755}
-  m_IndirectSpecularColor: {r: 0.99999946, g: 0.99999946, b: 0.99999946, a: 1}
+  m_IndirectSpecularColor: {r: 0.6030751, g: 0.6951424, b: 0.5436576, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2566,7 +2566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &545073997
 Transform:
   m_ObjectHideFlags: 0
@@ -2959,6 +2959,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 7
     m_NumAlphaKeys: 2
+  Player: {fileID: 863018354}
   maxIntensity: 3
   minIntensity: 0
   minPoint: -0.2
@@ -3015,7 +3016,7 @@ MonoBehaviour:
   fogScale: 1
   dayAtomosphereThickness: 0.4
   nightAtmosphereThickness: 0.87
-  dayRotateSpeed: {x: -0.4, y: 0, z: 0}
+  dayRotateSpeed: {x: -0.3, y: 0, z: 0}
   nightRotateSpeed: {x: -0.3, y: 0, z: 0}
 --- !u!1 &643878095
 GameObject:
@@ -5126,7 +5127,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 2099938410
+  randomSeed: -433614832
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -11087,7 +11088,7 @@ MonoBehaviour:
   AccelerationPoint: 10
   AccelerationPoint2: 15
   AccelerationPoint3: 200
-  FloatEndPositionY: 1200
+  FloatEndPositionY: 800
   AS: {fileID: 0}
   BA: {fileID: 0}
   Moment: {fileID: 2053358785}
@@ -11625,7 +11626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1980245531
 Transform:
   m_ObjectHideFlags: 0
@@ -11645,7 +11646,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1980245530}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d2df902e1b324361affbd67f80b2069, type: 3}
   m_Name: 
@@ -11806,7 +11807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2053358786
 Transform:
   m_ObjectHideFlags: 0
