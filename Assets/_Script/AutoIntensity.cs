@@ -6,6 +6,7 @@ public class AutoIntensity : MonoBehaviour {
 
     public Gradient nightDayColor;
     public GameObject Player;
+    public GameObject Star;
 
     public float maxIntensity = 3f;
     public float minIntensity = 0f;
@@ -30,12 +31,15 @@ public class AutoIntensity : MonoBehaviour {
     Light mainLight;
     Skybox sky;
     Material skyMat;
+    float Starlifetime;
+    private ParticleSystem ps;
 
 	// Use this for initialization
 	void Start () {
 
         mainLight = GetComponent<Light>();
         skyMat = RenderSettings.skybox;
+        //ps = Star.gameObject.GetComponent<ParticleSystem>();
 
 	}
 	
@@ -64,7 +68,6 @@ public class AutoIntensity : MonoBehaviour {
 
         if (dot > 0)
         {
-
             if (Player.transform.position.y > 15f & dot >0.42f)
             {
                 dayRotateSpeed = new Vector3(-1f, 0, 0);
